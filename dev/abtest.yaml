@@ -4,8 +4,10 @@ metadata:
   labels:
     app.kubernetes.io/name: ab-testing-operator
     app.kubernetes.io/managed-by: kustomize
-  name: wallet-service-abtest
+  name: wallet-service
 spec:
-  targetService: myapp
+  targetService: wallet-service
   trafficWeight: 50
   image: nginx:latest
+  replicas: 2
+  port: 80
