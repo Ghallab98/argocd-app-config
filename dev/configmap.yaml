@@ -1,0 +1,12 @@
+apiVersion: v1
+Kind: ConfigMap
+metadata:
+  name: my-app-service-configmap
+  namespace: myapp
+  labels:
+    app: my-app-service-configmap
+    type: configmap
+data:
+  my-app-service-configmap: |
+    APP_NAME: my-app-service
+    APP_PORT: 80
