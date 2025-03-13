@@ -8,6 +8,6 @@ metadata:
 spec:
   targetService: wallet-service
   trafficWeight: 50
-  image: nginx:otel
+  image: nginx:latest
   replicas: 2
   port: 80
