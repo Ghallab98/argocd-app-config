@@ -1,0 +1,22 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    monitor: apps
+  name: myapp-deployment-metrics
+  namespace: monitor
+spec:
+  endpoints:
+  - interval: 30s
+    path: api/metrics
+    port: http
+    scrapeTimeout: 10s
+    relabelings:
+      - sourceLabels: [__meta_kubernetes_pod_label_version]
+        targetLabel: version
+  namespaceSelector:
+    matchNames:
+    - "default"
+  selector:
+    matchLabels:
+      app: myapp-deployment
