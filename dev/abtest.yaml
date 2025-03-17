@@ -4,9 +4,9 @@ metadata:
   labels:
     app.kubernetes.io/name: ab-testing-operator
     app.kubernetes.io/managed-by: kustomize
-  name: wallet-service
+  name: myapp-deployment-abtest
 spec:
-  targetService: wallet-service
+  targetService: myapp-deployment
   trafficWeight: 50
   image: nginx:latest
   replicas: 2
