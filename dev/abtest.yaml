@@ -1,0 +1,13 @@
+apiVersion: abtesting.com/v1
+kind: ABTest
+metadata:
+  labels:
+    app.kubernetes.io/name: ab-testing-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: myapp-deployment-abtest
+spec:
+  targetService: myapp-deployment
+  trafficWeight: 50
+  image: nginx:latest
+  replicas: 2
+  port: 80
