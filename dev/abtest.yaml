@@ -8,6 +8,6 @@ metadata:
 spec:
   targetService: myapp-deployment
   trafficWeight: 50
-  image: promhippie/dockerhub_exporter
+  image: prom/node-exporter
   replicas: 2
-  port: 9505
+  port: 9100
