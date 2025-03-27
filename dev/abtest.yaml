@@ -8,6 +8,6 @@ metadata:
 spec:
   targetService: myapp-deployment
   trafficWeight: 50
-  image: prom/node-exporter
+  image: nginx/nginx-prometheus-exporter
   replicas: 2
-  port: 9100
+  port: 9113
