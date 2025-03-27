@@ -8,6 +8,6 @@ metadata:
 spec:
   targetService: myapp-deployment
   trafficWeight: 50
-  image: nginx:latest
+  image: promhippie/dockerhub_exporter
   replicas: 2
-  port: 80
+  port: 9505
