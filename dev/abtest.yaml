@@ -1,4 +1,4 @@
-apiVersion: abtesting.com/v1
+apiVersion: abtesting.mtcloud.zone/v1
 kind: ABTest
 metadata:
   labels:
