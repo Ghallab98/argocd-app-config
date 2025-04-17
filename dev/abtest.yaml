@@ -10,7 +10,7 @@ spec:
   targetService: myapp-deployment
   image: nginx:latest
   port: 80
-  replicaCount: 1
+  replicaCount: 2
   resources:
     limits:
       cpu: 500m
